@@ -3,45 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IoT Dashboard - Últimos 10 Registros</title>
+  <title>Dashboard IoT</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
+    <link rel="stylesheet" href="css/styles.css">
 
+</head>
+<body>
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">📡 IoT Dashboard</a>
-      <a href="index.html" class="btn btn-outline-light btn-sm">Ir a CRUD</a>
+      <a class="navbar-brand" href="#">IoT Dashboard</a>
+      <div>
+        <a class="btn btn-outline-light" href="index.html">Ir al CRUD</a>
+      </div>
     </div>
   </nav>
 
-  <main class="container my-4">
-    <div class="card shadow p-4 mb-4">
-      <h5 class="card-title">Últimos 10 registros (auto-refresh cada 2s)</h5>
-      <table class="table table-striped text-center align-middle" id="recordsTable10">
-        <thead class="table-dark">
-          <tr>
-            <th>ID</th>
-            <th>Status</th>
-            <th>IP</th>
-            <th>Fecha</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+  <div class="container mt-4">
+    <h3>Últimos 10 registros (Actualización cada 2s)</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th>IP</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody id="dashboardTable"></tbody>
+    </table>
 
-    <div class="alert alert-primary text-center fs-5" id="lastStatus10">
-      Último status: <strong>--</strong>
-    </div>
-  </main>
+    <h4>Último Status: <span id="lastStatusDashboard" class="text-success fw-bold"></span></h4>
+  </div>
 
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">Desarrollado por Hernández Fernández Mary Jose 💻</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 mt-4">
+    Desarrollado por Mary Jose Hernández Fernández - 2025
   </footer>
 
   <script src="js/dashboard.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

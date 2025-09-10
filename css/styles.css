@@ -1,3 +1,105 @@
-body {
-  background-color: #f8f9fa;
+/* Navbar oscuro pastel */
+.navbar {
+    background: linear-gradient(90deg, #d47f7f, #e1a68c); /* más oscuro que antes */
+}
+
+/* Botones */
+.btn-success {
+    background-color: #d88b97; /* rosa oscuro */
+    border-color: #d88b97;
+    color: #fff;
+}
+.btn-success:hover {
+    background-color: #c77b85;
+    border-color: #c77b85;
+    color: #fff;
+}
+
+.btn-outline-light {
+    color: #fff;
+    border-color: #d88b97;
+}
+.btn-outline-light:hover {
+    background-color: #d88b97;
+    color: #fff;
+    border-color: #d88b97;
+}
+
+.btn-warning {
+    background-color: #c88c6f; /* naranja oscuro pastel */
+    border-color: #c88c6f;
+    color: #fff;
+}
+.btn-warning:hover {
+    background-color: #b37a5d;
+    border-color: #b37a5d;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #c86f6f; /* rojo oscuro pastel */
+    border-color: #c86f6f;
+    color: #fff;
+}
+.btn-danger:hover {
+    background-color: #b35c5c;
+    border-color: #b35c5c;
+    color: #fff;
+}
+
+/* Tablas */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th {
+    background-color: #b46b6b !important; /* header más oscuro */
+    color: #fff;
+}
+
+table td {
+    background-color: #d88b97; /* rosa oscuro suave */
+    color: #fff;
+}
+
+table tbody tr:hover td {
+    background-color: #c77b85;
+}
+
+/* Último status */
+.text-primary {
+    color: #ffc0cb !important; /* rosa pastel claro */
+}
+
+.text-success {
+    color: #ffb6b9 !important; /* rosado suave */
+}
+
+/* Footer oscuro pastel */
+footer {
+    background: linear-gradient(90deg, #d47f7f, #e1a68c);
+    color: #fff !important;
+    font-weight: 500;
+}
+
+/* Formulario */
+form {
+    background-color: #c88b97;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+/* Select */
+select.form-select {
+    background-color: #d88b97;
+    border: 1px solid #b46b6b;
+    color: #fff;
+}
+select.form-select:focus {
+    border-color: #ffc0cb;
+    box-shadow: 0 0 0 0.2rem rgba(255,192,203,.25);
+    color: #fff;
 }
