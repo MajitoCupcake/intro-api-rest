@@ -3,76 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IoT CRUD - Últimos 5 Registros</title>
+  <title>App API REST MockApi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-light">
-
+<body>
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">📡 IoT CRUD</a>
-      <a href="dashboard.html" class="btn btn-outline-light btn-sm">Ver Dashboard</a>
+      <a class="navbar-brand" href="#">IoT CRUD</a>
+      <div>
+        <a class="btn btn-outline-light" href="dashboard.html">Ir a Dashboard</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Contenido Principal -->
-  <main class="container my-4">
-    <!-- Formulario CRUD -->
-    <div class="card shadow p-4 mb-4">
-      <h5 class="card-title">Agregar / Editar Status</h5>
-      <form id="statusForm">
-        <div class="mb-3">
-          <label for="status" class="form-label">Selecciona el estado:</label>
+  <div class="container mt-4">
+    <h3>Agregar nuevo Status</h3>
+    <form id="statusForm" class="mb-3">
+      <div class="row">
+        <div class="col-md-6">
           <select id="status" class="form-select" required>
-            <option value="">-- Selecciona --</option>
-            <option value="Adelante">Adelante</option>
-            <option value="Atrás">Atrás</option>
-            <option value="Detener">Detener</option>
-            <option value="Adelante derecha">Adelante derecha</option>
-            <option value="Adelante izquierda">Adelante izquierda</option>
-            <option value="Atrás derecha">Atrás derecha</option>
-            <option value="Atrás izquierda">Atrás izquierda</option>
-            <option value="Giro 90° derecha">Giro 90° derecha</option>
-            <option value="Giro 90° izquierda">Giro 90° izquierda</option>
-            <option value="Giro 360° derecha">Giro 360° derecha</option>
-            <option value="Giro 360° izquierda">Giro 360° izquierda</option>
+            <option value="">Selecciona un status</option>
+            <option>Adelante</option>
+            <option>Atrás</option>
+            <option>Detener</option>
+            <option>Adelante derecha</option>
+            <option>Adelante izquierda</option>
+            <option>Atrás derecha</option>
+            <option>Atrás izquierda</option>
+            <option>Giro 90° derecha</option>
+            <option>Giro 90° izquierda</option>
+            <option>Giro 360° derecha</option>
+            <option>Giro 360° izquierda</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <button type="reset" class="btn btn-secondary">Cancelar</button>
-      </form>
-    </div>
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+      </div>
+    </form>
 
-    <!-- Últimos 5 registros -->
-    <div class="card shadow p-4 mb-4">
-      <h5 class="card-title">Últimos 5 registros</h5>
-      <table class="table table-striped text-center align-middle" id="recordsTable">
-        <thead class="table-dark">
-          <tr>
-            <th>ID</th>
-            <th>Status</th>
-            <th>IP</th>
-            <th>Fecha</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <h4>Últimos 5 registros</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th>IP</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="recordsTable"></tbody>
+    </table>
 
-    <!-- Último Status -->
-    <div class="alert alert-info mt-4 text-center fs-5" id="lastStatus">
-      Último status: <strong>--</strong>
-    </div>
-  </main>
+    <h4>Último Status: <span id="lastStatus" class="text-primary fw-bold"></span></h4>
+  </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">Desarrollado por Hernández Fernández Mary Jose 💻</p>
+  <footer class="bg-dark text-light text-center py-3 mt-4">
+    Desarrollado por Mary Jose Hernández Fernández - 2025
   </footer>
 
   <script src="js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
